@@ -1,0 +1,85 @@
+
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" version="4.0">
+<display-name>E-Voting System</display-name>
+<!--  Default welcome page  -->
+<welcome-file-list>
+<welcome-file>index.jsp</welcome-file>
+</welcome-file-list>
+<!--  ── Servlet Mappings ─────────────────────────────────  -->
+<!--  User Registration  -->
+<servlet>
+<servlet-name>RegisterServlet</servlet-name>
+<servlet-class>com.evoting.servlet.RegisterServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+<servlet-name>RegisterServlet</servlet-name>
+<url-pattern>/register</url-pattern>
+</servlet-mapping>
+<!--  User Login  -->
+<servlet>
+<servlet-name>UserLoginServlet</servlet-name>
+<servlet-class>com.evoting.servlet.UserLoginServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+<servlet-name>UserLoginServlet</servlet-name>
+<url-pattern>/userLogin</url-pattern>
+</servlet-mapping>
+<!--  Admin Login  -->
+<servlet>
+<servlet-name>AdminLoginServlet</servlet-name>
+<servlet-class>com.evoting.servlet.AdminLoginServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+<servlet-name>AdminLoginServlet</servlet-name>
+<url-pattern>/adminLogin</url-pattern>
+</servlet-mapping>
+<!--  Approve / Reject Voter  -->
+<servlet>
+<servlet-name>ApproveVoterServlet</servlet-name>
+<servlet-class>com.evoting.servlet.ApproveVoterServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+<servlet-name>ApproveVoterServlet</servlet-name>
+<url-pattern>/approveVoter</url-pattern>
+</servlet-mapping>
+<!--  Add Election  -->
+<servlet>
+<servlet-name>AddElectionServlet</servlet-name>
+<servlet-class>com.evoting.servlet.AddElectionServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+<servlet-name>AddElectionServlet</servlet-name>
+<url-pattern>/addElection</url-pattern>
+</servlet-mapping>
+<!--  Add Candidate  -->
+<servlet>
+<servlet-name>AddCandidateServlet</servlet-name>
+<servlet-class>com.evoting.servlet.AddCandidateServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+<servlet-name>AddCandidateServlet</servlet-name>
+<url-pattern>/addCandidate</url-pattern>
+</servlet-mapping>
+<!--  Cast Vote  -->
+<servlet>
+<servlet-name>VoteServlet</servlet-name>
+<servlet-class>com.evoting.servlet.VoteServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+<servlet-name>VoteServlet</servlet-name>
+<url-pattern>/vote</url-pattern>
+</servlet-mapping>
+<!--  Logout  -->
+<servlet>
+<servlet-name>LogoutServlet</servlet-name>
+<servlet-class>com.evoting.servlet.LogoutServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+<servlet-name>LogoutServlet</servlet-name>
+<url-pattern>/logout</url-pattern>
+</servlet-mapping>
+<!--  Session timeout: 30 minutes  -->
+<session-config>
+<session-timeout>30</session-timeout>
+</session-config>
+</web-app>
